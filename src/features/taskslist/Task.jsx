@@ -31,16 +31,16 @@ const Task = () => {
   return (
     <>
       <div className="rounded rounded-1 col-md-5  col-10 py-5">
-        <div className="input-group">
+        <div className="input-group ">
           <input
             type="text"
-            className="form-control rounded-0 rounded-start"
-            value={`Tasks ${tasks.length}`}
+            className="form-control rounded-0 "
+            value={`Task ${tasks.length}`}
             readOnly
           />
           <button
             type="button"
-            className="input-group-text  rounded-0 rounded-end"
+            className="input-group-text  rounded-0 fs-5"
             onClick={() => {
               setFormState(true);
               handleEdit(false);
