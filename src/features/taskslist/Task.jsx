@@ -40,13 +40,13 @@ const Task = () => {
           />
           <button
             type="button"
-            className="input-group-text  rounded-0 fs-5"
+            className="input-group-text  rounded-0"
             onClick={() => {
               setFormState(true);
               handleEdit(false);
             }}
           >
-            &#43;
+            <i className="fas fa-plus "></i>
           </button>
         </div>
 

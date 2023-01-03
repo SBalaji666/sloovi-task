@@ -153,7 +153,7 @@ const TaskForm = props => {
       <div className="buttons d-flex justify-content-between">
         {editForm && (
           <span onClick={handleDelete} className="btn text-danger ">
-            &times;
+            <i className="fas fa-trash "></i>
           </span>
         )}
 
@@ -166,25 +166,15 @@ const TaskForm = props => {
             cancel
           </button>
 
-          {!editForm && (
-            <button
-              type="button"
-              onClick={handleForm}
-              className="btn btn-success btn-sm px-4 add-save"
-            >
-              save
-            </button>
-          )}
-
-          {editForm && (
-            <button
-              type="button"
-              className="btn btn-success btn-sm px-4 edit-save"
-              onClick={handleFormEdit}
-            >
-              Save
-            </button>
-          )}
+          <button
+            type="button"
+            onClick={() => {
+              !editForm ? handleForm() : handleFormEdit();
+            }}
+            className="btn btn-success btn-sm px-4 add-save"
+          >
+            save
+          </button>
         </div>
       </div>
     </form>

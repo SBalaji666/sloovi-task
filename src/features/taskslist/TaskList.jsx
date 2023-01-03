@@ -14,9 +14,14 @@ const TaskList = ({ tasks, handleForm, selectTask, handleEdit }) => {
         key={task.id}
       >
         <div className="d-flex align-items-center">
-          <img className="me-2 w-25 rounded" src={`${task.user_icon}`} alt="" />
+          <img
+            className="me-2 rounded user-icon"
+            src={`${task.user_icon}`}
+            alt=""
+          />
+
           <div>
-            <span className="fw-bold name">{task.assigned_user}</span> <br />
+            <span className="fw-bold name">{task.task_msg}</span> <br />
             <span className="date">{task.task_date}</span>
           </div>
         </div>
